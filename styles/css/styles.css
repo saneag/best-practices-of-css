@@ -137,3 +137,181 @@ ul,
 li {
   list-style: none;
 }
+
+.header__nav .burger-menu {
+  visibility: hidden;
+  width: 40px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.header__nav .burger-menu .bar {
+  width: 100%;
+  height: 5px;
+  background-color: #f64c72;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.header__nav .burger-menu .bar.bar__top.change {
+  -webkit-transform: rotate(45deg) translate(7px, 7px);
+          transform: rotate(45deg) translate(7px, 7px);
+}
+.header__nav .burger-menu .bar.bar__middle.change {
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+  opacity: 0;
+}
+.header__nav .burger-menu .bar.bar__bottom.change {
+  -webkit-transform: rotate(-45deg) translate(7px, -7px);
+          transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.header__nav .lang-changer__dropdown {
+  position: relative;
+}
+.header__nav .lang-changer__dropdown:hover .dropdown__content {
+  display: block;
+}
+.header__nav .lang-changer__dropdown .dropdown__button {
+  background-color: #f64c72;
+  padding: 0.5rem 0.7rem;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1rem;
+}
+.header__nav .lang-changer__dropdown .dropdown__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  position: absolute;
+  margin: 0 auto;
+  background-color: #2f2fa2;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.header__nav .lang-changer__dropdown .dropdown__content .dropdown__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  padding: 0.7rem 1rem;
+  color: #fff;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1rem;
+}
+.header__nav .lang-changer__dropdown .dropdown__content .dropdown__link:hover {
+  background-color: #131464;
+}
+.header__nav .lang-changer__dropdown .dropdown__content .dropdown__link:not(:nth-child(2)) {
+  border-radius: 10px;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: #131464;
+  position: fixed;
+}
+.header__nav {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__nav .nav__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 20px;
+}
+.header__nav .nav__links li a {
+  color: #fff;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1.5rem;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.header__nav .nav__links li a:hover {
+  text-shadow: 0px 0px 5px #fff;
+}
+
+main {
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 992px) {
+  .header__nav {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .header__nav .burger-menu {
+    visibility: visible;
+  }
+  .header__nav .nav__links {
+    height: 100vh;
+    background-color: #131464;
+    visibility: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+    position: fixed;
+    left: -200px;
+    top: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .header__nav .show {
+    visibility: visible;
+    left: 0;
+  }
+}

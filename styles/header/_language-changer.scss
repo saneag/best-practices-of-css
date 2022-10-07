@@ -1,0 +1,44 @@
+.header {
+    &__nav {
+        .lang-changer__dropdown {
+            position: relative;
+
+            &:hover .dropdown__content {
+                display: block;
+            }
+
+            .dropdown__button {
+                background-color: $button-color;
+                padding: 0.5rem 0.7rem;
+                border-radius: 10px;
+                @include linkColor;
+            }
+
+            .dropdown__content {
+                @include displayFlex(column, $align: center);
+                display: none;
+                position: absolute;
+                margin: 0 auto;
+                background-color: $tertiary-color;
+                border-radius: 10px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+
+                .dropdown__link {
+                    display: flex;
+                    gap: 5px;
+                    padding: 0.7rem 1rem;
+                    @include linkColor;
+
+                    &:hover {
+                        background-color: $secondary-color;
+                    }
+
+                    &:not(:nth-child(2)) {
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@media only screen and (max-width: 992px) {
+    .header {
+        &__nav {
+            justify-content: space-around;
+
+            .burger-menu {
+                visibility: visible;
+            }
+
+            .nav__links {
+                height: 100vh;
+                background-color: $secondary-color;
+                visibility: hidden;
+                flex-direction: column;
+                gap: 40px;
+                padding: 0 20px;
+                position: fixed;
+                left: -200px;
+                top: 0;
+                transition: .5s;
+            }
+
+            .show {
+                visibility: visible;
+                left: 0;
+            }
+        }
+    }
+}

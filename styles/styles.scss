@@ -1,7 +1,7 @@
 @import 'variables';
 @import 'resets';
 @import 'mixins';
-@import 'media-queries';
-@import 'header';
+@import './header/header';
 @import 'main';
 @import 'footer';
+@import 'media-queries';

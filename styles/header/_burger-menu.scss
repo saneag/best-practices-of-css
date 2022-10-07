@@ -1,0 +1,32 @@
+.header {
+    &__nav {
+        .burger-menu {
+            visibility: hidden;
+            width: 40px;
+            height: 25px;
+            @include displayFlex(column, space-between, center);
+            cursor: pointer;
+
+            .bar {
+                width: 100%;
+                height: 5px;
+                background-color: $button-color;
+                border-radius: 10px;
+                transition: .3s;
+
+                &.bar__top.change {
+                    transform: rotate(45deg) translate(7px, 7px);
+                }
+
+                &.bar__middle.change {
+                    transform: translateX(-20px);
+                    opacity: 0;
+                }
+
+                &.bar__bottom.change {
+                    transform: rotate(-45deg) translate(7px, -7px);
+                }
+            }
+        }
+    }
+}
