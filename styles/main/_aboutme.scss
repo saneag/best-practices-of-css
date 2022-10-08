@@ -1,0 +1,43 @@
+@import 'greetings';
+
+.main {
+    .aboutme-section {
+        @include displayFlex($justify: center, $align: center);
+        min-height: 100%;
+
+        &__content {
+            @include displayFlex($justify: space-between, $align: center);
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .aboutme__image {
+                width: 20rem;
+                border-radius: 10px;
+            }
+
+            .aboutme__description {
+                flex: 2;
+                @include displayFlex(column, center, center);
+                @include aboutme_greetings;
+
+                .description {
+                    margin-top: 30px;
+                    @include displayFlex(column, center, center);
+
+                    p {
+                        @include textStyle(1.2rem);
+                        color: rgb(200, 200, 200);
+                        width: 80%;
+                        line-height: 30px;
+
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            width: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

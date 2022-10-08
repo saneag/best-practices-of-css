@@ -1,0 +1,49 @@
+@mixin aboutme_greetings {
+
+    .greetings {
+        font-family: 'Source Code Pro', sans-serif;
+        font-size: 3rem;
+        color: #fff;
+        position: relative;
+        margin: 0 20px;
+
+        &.typewriter {
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+            }
+
+            &::before {
+                background-color: $primary-color;
+                animation: caret 2s steps(12) forwards 1s;
+            }
+
+            &::after {
+                width: 0.1em;
+                background-color: #fff;
+                animation:
+                    caret 2s steps(12) forwards 1s,
+                    blink .5s steps(12) infinite;
+            }
+        }
+    }
+}
+
+@keyframes caret {
+
+    to {
+        left: 100%
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}

@@ -5,7 +5,7 @@
     align-items: $align;
 }
 
-@mixin linkColor($fontSize: 1rem) {
+@mixin textStyle($fontSize: 1rem) {
     color: #fff;
     font-family: $Comfortaa;
     font-size: $fontSize;

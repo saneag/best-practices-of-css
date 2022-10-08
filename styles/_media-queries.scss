@@ -1,28 +1,41 @@
+@media only screen and (min-width: 993px) {
+    .main {
+        section {
+            height: 100vh;
+        }
+    }
+}
+
 @media only screen and (max-width: 992px) {
-    .header {
-        &__nav {
-            justify-content: space-around;
+    .main {
+        padding-top: 20px;
 
-            .burger-menu {
-                visibility: visible;
-            }
-
-            .nav__links {
-                height: 100vh;
-                background-color: $secondary-color;
-                visibility: hidden;
+        .aboutme-section {
+            &__content {
                 flex-direction: column;
-                gap: 40px;
-                padding: 0 20px;
-                position: fixed;
-                left: -200px;
-                top: 0;
-                transition: .5s;
+                justify-content: center;
             }
+        }
+    }
+}
 
-            .show {
-                visibility: visible;
-                left: 0;
+@media only screen and (max-width: 480px) {
+    .main {
+        section {
+            padding-left: 50px;
+        }
+
+        .aboutme-section {
+            &__content {
+                .aboutme__image {
+                    width: 15rem;
+                }
+
+                .aboutme__description {
+                    .greetings {
+                        font-size: 2rem;
+                    }
+                }
             }
         }
     }

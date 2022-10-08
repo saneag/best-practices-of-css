@@ -1,4 +1,4 @@
-.header {
+.sidebar {
     &__nav {
         .lang-changer__dropdown {
             position: relative;
@@ -11,7 +11,7 @@
                 background-color: $button-color;
                 padding: 0.5rem 0.7rem;
                 border-radius: 10px;
-                @include linkColor;
+                @include textStyle;
             }
 
             .dropdown__content {
@@ -28,14 +28,11 @@
                     display: flex;
                     gap: 5px;
                     padding: 0.7rem 1rem;
-                    @include linkColor;
+                    border-radius: 10px;
+                    @include textStyle;
 
                     &:hover {
                         background-color: $secondary-color;
-                    }
-
-                    &:not(:nth-child(2)) {
-                        border-radius: 10px;
                     }
                 }
             }

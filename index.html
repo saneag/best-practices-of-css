@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
     <!-- END -->
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/css/styles.css">
@@ -18,41 +19,63 @@
     <!-- End -->
     <!-- Scripts -->
     <script src="./scripts/scripts.js" defer></script>
-    <script src="./scripts/burger-menu.js" defer></script>
     <!-- End -->
     <title>CV</title>
 </head>
 
 <body>
-    <header class="header">
-        <nav class="header__nav">
-            <div class="burger-menu" id="burger-menu">
-                <span class="bar bar__top"></span>
-                <span class="bar bar__middle"></span>
-                <span class="bar bar__bottom"></span>
-            </div>
-            <ul class="nav__links" id="nav-links">
-                <li><a href="#whoami">Who am I?</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-            <div class="lang-changer">
-                <div class="lang-changer__dropdown">
-                    <button class="dropdown__button"><i class="fa-solid fa-earth-americas"></i></button>
-                    <div class="dropdown__content">
-                        <a class="dropdown__link" href="#"><img src="./assets/images/russia.png" />RU</a>
-                        <a class="dropdown__link" href="#"><img src="./assets/images/romania.png" />RO</a>
+    <main class="main">
+        <div class="sidebar">
+            <div class="sidebar__nav">
+                <ul class="nav__links" id="nav-links">
+                    <li><a href="#aboutme"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#skills"><i class="fa-solid fa-lightbulb"></i></a></li>
+                    <li><a href="#projects"><i class="fa-solid fa-book"></i></a></li>
+                </ul>
+                <div class="lang-changer">
+                    <div class="lang-changer__dropdown">
+                        <button class="dropdown__button"><i class="fa-solid fa-earth-americas"></i></button>
+                        <div class="dropdown__content">
+                            <a class="dropdown__link" href="#"><img src="./assets/images/russia.png" />RU</a>
+                            <a class="dropdown__link" href="#"><img src="./assets/images/romania.png" />RO</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <main>
-        <section id="whoami"></section>
-        <section id="skills"></section>
-        <section id="projects"></section>
+        </div>
+        <section class="aboutme-section" id="aboutme">
+            <div class="container">
+                <div class="aboutme-section__content">
+                    <img class="aboutme__image" src="./assets/images/sanea.jpg" alt="my_photo" />
+                    <div class="aboutme__description">
+                        <p class="greetings typewriter">HI! I'm Alex</p>
+                        <div class="description">
+                            <p>I am an IT student at UTM passionate about web application development. I have started
+                                creating websites since 2018. I am a fast learner and I am always looking for new
+                                challenges.</p>
+                            <p>Do you search a great team player? Yeah, that's me. I'm always ready to help my
+                                colleagues.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="container">
+                <div class="skills__gallery">
+                    <div class="skill"></div>
+                    <div class="skill"></div>
+                    <div class="skill"></div>
+                    <div class="skill"></div>
+                    <div class="skill"></div>
+                    <div class="skill"></div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="container"></div>
+        </section>
     </main>
-    <footer></footer>
 </body>
 
 </html>

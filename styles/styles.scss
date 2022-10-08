@@ -1,7 +1,23 @@
 @import 'variables';
 @import 'resets';
 @import 'mixins';
-@import './header/header';
-@import 'main';
-@import 'footer';
+@import './sidebar/sidebar';
+@import './main/main';
 @import 'media-queries';
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: $primary-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $tertiary-color;
+    border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 992px) {
+    html {
+        scroll-padding: 20px;
+    }
+}
