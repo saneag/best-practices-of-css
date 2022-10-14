@@ -1,0 +1,79 @@
+@import '../mixins';
+
+.skills-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    gap: 20px;
+
+    .skills-container {
+        @include displayFlex(column, space-between, center);
+        gap: 20px;
+
+        .skills__image {
+            width: 200px;
+            height: 200px;
+        }
+
+        .skills__progress {
+            width: 100%;
+
+            .progress__bar {
+                width: 100%;
+                height: 20px;
+                background-color: rgb(112, 112, 112);
+                text-align: center;
+                border-radius: 10px;
+
+                &.html {
+                    position: relative;
+
+                    &::before {
+                        @include progressBar("90%", 90%, #e34f26);
+                    }
+                }
+
+                &.css {
+                    position: relative;
+
+                    &::before {
+                        @include progressBar("90%", 90%, #264de4);
+                    }
+                }
+
+                &.js {
+                    position: relative;
+
+                    &::before {
+                        @include progressBar("80%", 80%, #f7df1e);
+                    }
+                }
+
+                &.react {
+                    position: relative;
+
+                    &::before {
+                        @include progressBar("70%", 70%, #61dafb);
+                    }
+                }
+
+                &.sass {
+                    position: relative;
+
+                    &::before {
+                        @include progressBar("80%", 80%, #cc6699);
+                    }
+                }
+
+                &.angular {
+                    position: relative;
+
+                    &::before {
+                        @include progressBar("20%", 20%, #dd1b16);
+                    }
+                }
+            }
+        }
+    }
+}

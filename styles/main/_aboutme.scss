@@ -2,9 +2,6 @@
 
 .main {
     .aboutme-section {
-        @include displayFlex($justify: center, $align: center);
-        min-height: 100%;
-
         &__content {
             @include displayFlex($justify: space-between, $align: center);
             flex-wrap: wrap;
@@ -12,7 +9,10 @@
 
             .aboutme__image {
                 width: 20rem;
-                border-radius: 10px;
+                height: 20rem;
+                object-fit: cover;
+                object-position: top;
+                border-radius: 50%;
             }
 
             .aboutme__description {

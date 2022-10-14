@@ -10,3 +10,19 @@
     font-family: $Comfortaa;
     font-size: $fontSize;
 }
+
+@mixin progressBar($content: "", $width: 0, $bgColor: transparent) {
+    content: $content;
+    width: $width;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: $bgColor;
+
+    @include displayFlex(row, center, center);
+    @include textStyle();
+    color: #000;
+}

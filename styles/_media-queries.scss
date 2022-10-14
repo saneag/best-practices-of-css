@@ -1,12 +1,23 @@
 @media only screen and (min-width: 993px) {
-    .main {
-        section {
-            height: 100vh;
+    html {
+        scroll-snap-type: y mandatory;
+    }
+
+    .skills-gallery {
+        .skills-container {
+            .skills__image {
+                width: 250px;
+                height: 250px;
+            }
         }
     }
 }
 
 @media only screen and (max-width: 992px) {
+    html {
+        scroll-padding: 20px;
+    }
+
     .main {
         padding-top: 20px;
 

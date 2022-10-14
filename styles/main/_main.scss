@@ -1,19 +1,17 @@
 @import 'aboutme';
+@import 'skills';
 
 .main {
     // stop page from scrolling down
     overflow-anchor: none;
-    min-height: 100vh;
     background-color: $primary-color;
 
     section {
         scroll-snap-align: start;
         padding-left: 70px;
-    }
 
-    .container {
-        width: 100%;
-        max-width: 1240px;
-        margin: 0 auto;
+        &:not(:first-of-type) {
+            margin-top: 20px;
+        }
     }
 }
