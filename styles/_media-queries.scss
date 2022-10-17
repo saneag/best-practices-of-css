@@ -27,6 +27,26 @@
                 justify-content: center;
             }
         }
+
+        .studies-container {
+
+            .experience,
+            .education {
+                .card {
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    height: 100%;
+
+                    .year {
+                        width: 100%;
+                    }
+
+                    &__body {
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 }
 

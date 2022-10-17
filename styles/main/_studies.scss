@@ -1,0 +1,68 @@
+@import '../_mixins';
+@import '../variables';
+
+.main {
+    .studies-container {
+        width: 70%;
+        @include displayFlex(column);
+        gap: 40px;
+
+        .experience {
+            @include displayFlex(column);
+            gap: 20px;
+
+            .studies__title {
+                @include textStyle(2rem);
+                text-align: center;
+            }
+
+            .card {
+                @include displayFlex($justify: center, $align: center);
+                width: 100%;
+                height: 150px;
+                border-radius: 10px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                overflow: hidden;
+
+                .year {
+                    @include displayFlex($justify: center, $align: center);
+                    width: 20%;
+                    height: 100%;
+                    background-color: $tertiary-color;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                    padding: 5px;
+                    text-align: center;
+
+                    p {
+                        @include textStyle(1.5rem);
+                        line-height: 2rem;
+                    }
+                }
+
+                &__body {
+                    @include displayFlex(column, center, center);
+                    width: 80%;
+                    height: 100%;
+
+                    p {
+                        @include textStyle(1.5rem);
+                        color: #000;
+                        line-height: 2rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .education {
+            @extend .experience;
+
+            .card {
+                .year {
+                    background-color: rgb(43, 185, 43);
+                }
+            }
+        }
+    }
+}
